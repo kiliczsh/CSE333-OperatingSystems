@@ -1,4 +1,11 @@
 number="$1"
+
+ if [ $number -lt 10 ] 
+ then
+	echo "$number=$number"
+	exit 1
+ fi
+
 len=`echo ${#number}`
 i=0
 arrayOfDigits=""
