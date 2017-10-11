@@ -1,50 +1,30 @@
 number="$1"
-#Initialize the shell variables you are going to use
-output=0
-i=1
-firstIndex=0
-secondIndex=1
-#Extract the nuber of digits/characters
 len=`echo ${#number}`
-echo ""
-arrayOfDigits[len]=""
-arrayOfNumbers[len-1]=""
-index=0
-
-#if [len<=2 ] then
-#	echo "errorrr"
-#	exit 0
-#fi
-
-#Read the input contents digit by digit
-while [ $i -le $len ]
+i=0
+arrayOfDigits=""
+while [ $number -gt 0 ]
 do
-#Extract a digit
-    digit=`echo $number|cut -c$i`
-    arrayOfDigits[index]=$digit
-    echo "${arrayOfDigits[@]}"
-    index=`expr $index + 1`
-#Add it to the output variable
-    output=`expr $output + $digit`
-    i=`expr $i + 1`
+	arrayOfDigits[$i]=$(( $number % 10 ))
+	number=$(( $number / 10 ))
+	i=$((i+1))
 done
-k=0
-while (firstIndex<len-1 && secondIndex<len-1 ) do
-	echo "$k"
-	echo "${arrayOfDigits[secondIndex]} is second index"
-	echo ""
-	echo "${arrayOfDigits[firstIndex]} is first index"
-	echo ""	
-#arrayOfNumber[k] =(($arrayOfDigits[secondIndex]*10)+($arrayOfDigits[firstIndex]))
-	k +=1
-	echo $index
-	echo ""
+first=1
+second=0
+limit=$(($len-1))
+sum=0
+while [ "$first" -lt "$len" ]
+do
+	if [ "$first" -lt "$limit" ]
+	then
+    		echo -ne "${arrayOfDigits[$second]}""${arrayOfDigits[$first]}+"
+		let sum=$((sum+(($((${arrayOfDigits[$second]}*10))+$((${arrayOfDigits[$first]}))))))
+	        first=$(($first + 1))
+        	second=$(($second + 1))
+	else
+		echo -ne "${arrayOfDigits[$second]}""${arrayOfDigits[$first]}"
+		let sum=$((sum+(($((${arrayOfDigits[$second]}*10))+$((${arrayOfDigits[$first]}))))))
+        	first=$(($first + 1))
+        	second=$(($second + 1))
+	fi
 done
-echo ""
-#Display the output 
-printf "\n\n"
-echo '********************************************'
-echo '                  OUTPUT                    '
-echo '********************************************'
-echo 'Your entered : ' $number
-echo 'The output is : ' $output
+	echo "=$sum"
