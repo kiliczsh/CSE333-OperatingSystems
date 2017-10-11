@@ -11,9 +11,12 @@ __*Muhammed Kılıç*__ :octocat:
 - [ ] Question 2
 - [x] Question 3
 - [x] Question 4
-- [ ] Question 5
-- [ ] Bonus
-
+- [x] Question 5
+- [x] Bonus -except Q2 implement
+- [ ] Report
+- [ ] Screenshots
+- [ ] Comments
+ 
 ### Sample Code Block
 
 ``` shell
