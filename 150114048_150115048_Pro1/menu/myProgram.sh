@@ -1,15 +1,23 @@
-seq 1 10000 | while read i; do echo -en "\r$i"; done
-echo -en "\r"
+#!/bin/bash
+
+# Author: Mehmet Cumali Demir <150114048>
+# Author: Muhammed Kılıç <150115048>
+# 
+# cd 150114048_150115048_Pro1/menu/
+# Make this file executable:
+# chmod +x myProgram.sh
+#
+# Run as
+# ./myProgram.sh
+# follow instructions
+
 BASEDIR=$(pwd)
 PS3='Please select an option: '
 options=("Print asterisks" "Delete files" "Substitute words" "Organize directory" "Print sum of numbers"  "Exit")
 select opt in "${options[@]}"
 do
-seq 1 10000 | while read i; do echo -en "\r$i"; done
-echo -en "\r"
     case $opt in
         "Print asterisks")
-		echo "you chose choice 1"
 		cd ..
 		cd Q1/
 		./q1.sh "text1.txt"
@@ -52,3 +60,4 @@ echo -en "\r"
         *) echo invalid option;;
     esac
 done
+
