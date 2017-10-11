@@ -7,10 +7,12 @@ __*Muhammed Kılıç*__ :octocat:
 
  ### Task List
 
-- [x] Item 1
-- [ ] Item 2
-- [ ] Item 3
-- [ ] Item 4
+- [x] Question 1
+- [ ] Question 2
+- [x] Question 3
+- [x] Question 4
+- [ ] Question 5
+- [ ] Bonus
 
 ### Sample Code Block
 
