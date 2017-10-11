@@ -1,11 +1,16 @@
+ARG_MISSING_ERROR=404
 #file location for numbers
 input="$1"
-#while loop to read all of the file lines
-while IFS= read -r var
-do
-  for (( number = 0 ; number< $var ; number++ )) #counting for numbers to print symbol
-  do
-  	printf "*" #symbol to print 
-  done
-  	printf "\n" #new line for next number
-done < "$input" #end of file read
+  if [ -z "$1" ] 
+  then
+     echo "argument is missing"
+  exit $ARG_MISSING_ERROR
+  fi
+	while IFS= read -r var
+	do
+  		for (( number = 0 ; number< $var ; number++ )) #counting for numbers to print$
+  		do
+        	printf "*" #symbol to print 
+  		done
+        	printf "\n" #new line for next number
+	done < "$input" #end of file read
