@@ -8,11 +8,11 @@ __*Muhammed Kılıç*__ :octocat:
  ### Task List
 
 - [x] Question 1
-- [ ] Question 2
+- [x] Question 2
 - [x] Question 3
 - [x] Question 4
 - [x] Question 5
-- [x] Bonus -except Q2 implement
+- [x] Bonus
 - [ ] Report
 - [ ] Screenshots
 - [ ] Comments
