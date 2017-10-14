@@ -11,10 +11,11 @@
 # ./myProgram.sh
 # follow instructions
 
+#print the menu interface
 BASEDIR=$(pwd)
 PS3='Please select an option: '
 options=("Print asterisks" "Delete files" "Substitute words" "Organize directory" "Print sum of numbers"  "Exit")
-select opt in "${options[@]}"
+select opt in "${options[@]}" #take option and evaluate
 do
     case $opt in
         "Print asterisks")
@@ -64,4 +65,3 @@ do
         *) echo invalid option;;
     esac
 done
-
