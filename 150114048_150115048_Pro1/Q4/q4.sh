@@ -1,9 +1,9 @@
 #ls -lh
 
 #find the files just in the current directory and get the biggest file
-largestFile=`find . -maxdepth 1 -type f -exec basename {} \; | sort -n | head -1` 
+largestFile=`find . -maxdepth 1 -type f -exec basename {} \; | sort -k1n | head -1` 
 #find the files just in the current directory and get the smallest file
-smallestFile=`find . -maxdepth 1 -type f -exec basename {} \; | sort -n --reverse | head -1`
+smallestFile=`find . -maxdepth 1 -type f -exec basename {} \; | sort -k1n | tail -1`
 #get the current directory
 BASEDIR=$(pwd)
 echo -en "\r"
