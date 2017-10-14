@@ -1,10 +1,10 @@
 ARG_MISSING_ERROR=404
 #file location for numbers
 input="$1"
-  if [ -z "$1" ] 
+  if [ -z "$1" ] #check input 
   then
-     echo "argument is missing"
-  exit $ARG_MISSING_ERROR
+     echo "argument is missing"#show error
+  exit $ARG_MISSING_ERROR#exit with error code
   fi
 	while IFS= read -r var
 	do
