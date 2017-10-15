@@ -30,10 +30,8 @@ do
 	if [ "$first" -lt "$limit" ]
 	then
     		echo -ne "${arrayOfDigits[$second]}""${arrayOfDigits[$first]}+"
-
 	else
 		echo -ne "${arrayOfDigits[$second]}""${arrayOfDigits[$first]}"
-
 	fi
 		let sum=$((sum+(($((${arrayOfDigits[$second]}*10))+$((${arrayOfDigits[$first]}))))))
 	        first=$(($first + 1))
@@ -41,4 +39,3 @@ do
 done
 #print sum of numbers	
 echo "=$sum"
-
