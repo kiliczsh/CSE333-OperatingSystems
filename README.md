@@ -13,9 +13,9 @@ __*Muhammed Kılıç*__ :octocat:
 - [x] Question 4
 - [x] Question 5
 - [x] Bonus
-- [ ] Report
-- [ ] Screenshots
-- [ ] Comments
+- [x] Report
+- [x] Screenshots
+- [x] Comments
  
 ### Sample Code Block
 
