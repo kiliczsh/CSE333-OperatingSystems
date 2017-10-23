@@ -11,4 +11,4 @@ else
     exit $IS_NOT_DIRECTORY
 fi
 	shopt -s extglob
-	rm -i !(*.sh|*.c|"makefile"|"Makefile") #if there are files, remove all except that .c , .sh , makefile or Makefile. 
+	rm -i !(*.sh|*.h|*.c|"makefile"|"Makefile") #if there are files, remove all except that .c , .sh , makefile or Makefile. 
