@@ -1,9 +1,12 @@
 #!/bin/bash
+
 # Author: Mehmet Cumali Demir <150114048>
 # Author: Muhammed Kılıç <150115048>
+# 
 # cd 150114048_150115048_Pro1/menu/
 # Make this file executable:
 # chmod +x myProgram.sh
+#
 # Run as
 # ./myProgram.sh
 # follow instructions
@@ -19,30 +22,39 @@ do
 		cd ..
 		cd Q1/
 		chmod +x *.*
-		./q1.sh "text1.txt"
+		printf "\nEnter a file:\n"
+		read var
+		./q1.sh  $var
 		;;
         "Delete files")
 		cd ..
                 cd Q2/
                 chmod +x *.*
-                ./q2.sh
+		printf "\nEnter a file location:\n"
+                read var
+                ./q2.sh $var
                 ;;
+
         "Substitute words")
 		echo "you chose choice 3"
                 cd ..
                 cd Q3/
                 chmod +x *.*
-		printf "\nEnter a word to be replaced:\n"
+		printf "\nEnter a file to select:\n"
 		read var1
-		printf "\nEnter a word to replace:\n"
+		printf "\nEnter a word to be replaced:\n"
 		read var2
-                ./q3.sh "text3.txt" $var1 $var2
+		printf "\nEnter a word to replace:\n"
+		read var3
+                ./q3.sh $var1 $var2 $var3
                 ;;
 	"Organize directory")
 		cd ..
                 cd Q4/
                 chmod +x *.*
-                ./q4.sh
+		printf "\nEnter a directory:\n"
+		read currentDirectory
+                ./q4.sh currentDirectory
                 ;;
         "Print sum of numbers")
                 cd ..
